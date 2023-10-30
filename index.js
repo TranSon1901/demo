@@ -7,8 +7,7 @@ app.set('view engine', 'ejs');
 
 // app.use("/", home);
 app.get("/", (req, res, next) => {
-  return res.send("Test ok");
-  // return res.render('home/home');
+  return res.render('home');
 });
 
 const port = process.env.PORT || 9001;

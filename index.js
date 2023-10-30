@@ -3,8 +3,9 @@ const home = require("./routes/home");
 
 const app = express();
 app.use(express.json());
-app.set('view engine', 'ejs');
-app.set("views","./views");
+app.set("views", __dirname + "/views");
+app.set("view engine", "ejs");
+app.use(express.static(__dirname + "public"));
 
 // app.use("/", home);
 app.get("/", (req, res) => {

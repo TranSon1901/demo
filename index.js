@@ -9,7 +9,7 @@ app.set("views", __dirname + "/views");
 app.use(express.static(__dirname + "public"));
 
 app.use("/", home);
-app.use("/about", about);
+app.use("/", about);
 
 
 const port = 9001;

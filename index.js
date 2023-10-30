@@ -5,7 +5,11 @@ const app = express();
 app.use(express.json());
 app.set('view engine', 'ejs');
 
-app.use("/", home);
+// app.use("/", home);
+app.get("/", (req, res, next) => {
+  return res.send("Test ok");
+  // return res.render('home/home');
+});
 
 const port = process.env.PORT || 9001;
 app.listen(port, () => console.log(`Listening to port ${port}`));

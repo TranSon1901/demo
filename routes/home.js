@@ -1,12 +1,8 @@
 const express = require("express");
 const router = express.Router();
 
-router.get("/", async (req, res, next) => {
+router.get("/", (req, res) => {
   return res.render('home/home');
-  // return res.status(200).json({
-  //   title: "Express Testing",
-  //   message: "The app is working properly!",
-  // });
 });
 
 module.exports = router;

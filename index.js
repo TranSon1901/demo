@@ -2,6 +2,8 @@
 const express = require("express");
 const expressLayouts = require('express-ejs-layouts');
 require('dotenv').config();
+const path = require('path');
+
 const home = require("./routes/home");
 const about = require("./routes/about");
 
@@ -14,6 +16,7 @@ app.set("views", __dirname + "/views");
 
 /*Static Files */ 
 app.use(express.static(__dirname + "public"));
+app.use('/assets', express.static(path.join(__dirname, 'public')))
 
 /*Layout ejs */
 app.use(expressLayouts);

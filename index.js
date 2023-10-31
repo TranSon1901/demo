@@ -12,11 +12,10 @@ app.use(express.json());
 
 /* Set Templating Engine */
 app.set("view engine", "ejs");
-app.set("views", __dirname + "/views");
-
+app.set('views', path.join(__dirname, 'views')); 
+ 
 /*Static Files */ 
-app.use(express.static(__dirname + "public"));
-app.use('/assets', express.static(path.join(__dirname, 'public')))
+app.use('/assets', express.static(path.join(__dirname, 'public/assets')));
 
 /*Layout ejs */
 app.use(expressLayouts);

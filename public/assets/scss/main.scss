@@ -1,0 +1,174 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#wrapper{
+  background-color: #fff;
+  width: 375px;
+  margin: 0 auto;
+  min-height: 100vh;
+  border: 1px solid #999;
+  padding: 15px 20px 0px 20px;
+}
+button{
+  border: none;
+}
+#home{
+  width: 100%;
+}
+#profile{
+  img{
+    margin-left: auto;
+    display: block;
+  }
+}
+
+#menu{
+  p{
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 36px;
+    color: #14304A;
+  }
+  #menu_search{
+    position: relative;
+    input{
+      background: #EFEEEE;
+      border-radius: 30px;
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 34px;
+      color: #868585;
+      border: none;
+      outline: none;
+      width: 100%;
+      padding: 0px 0px 0px 40px;
+    }
+    img{
+      position: absolute;
+      padding: 10px 0px 0px 10px;
+    }
+  }
+}
+
+#catagories{
+  margin-top: 20px;
+  p{
+    /* Catagories */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #14304A;
+  }
+  #list{
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+#promotions{
+  p{
+  /* Promotions */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: #14304A;
+  }
+  .content{
+    display: flex;
+    background-color: #F7CA11;
+    padding: 10px;
+    border-radius: 10px;
+    justify-content: space-between;
+  }
+  .text_one{
+    /* Today’s Offer */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #14304A;
+  }
+  .text_tow{
+    /* Best Selling in your area */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: #14304A;
+  }
+  .text_three{
+    /* Homemade Fries */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #14304A;
+  }
+}
+
+#product{
+  .title{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: #14304A;
+  }
+  .list{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 20px;
+    .item{
+      background-color: #EBE8E8;
+      width: calc(50% - 10px) ;
+      text-align: center;
+      border-radius: 10px;
+      padding: 10px 0px 20px 0px;
+      p{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+        color: #101010;
+      }
+      .item_bottom{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 25px;
+        .price{
+          color: #C9AA05;
+        }
+      }
+    }
+  }
+}
+
+#navbar{
+  margin-top: 10px;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  bottom: 0;
+  background-color: #fff;
+}

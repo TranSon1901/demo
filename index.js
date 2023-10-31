@@ -6,6 +6,7 @@ const path = require('path');
 
 const home = require("./routes/home");
 const about = require("./routes/about");
+const order = require("./routes/order");
 
 const app = express();
 app.use(express.json());
@@ -23,6 +24,7 @@ app.set('layout', './layouts/layout');
 
 /*Routes */ 
 app.use("/", home);
+app.use("/order", order);
 app.use("/", about);
 
 /*Listen on Port*/

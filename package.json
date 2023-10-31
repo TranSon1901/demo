@@ -9,7 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon index.js",
-    "scss": "sass --watch src/scss/main.scss public/styles/main.css"
+    "scss": "sass --watch public/assets/scss/main.scss public/assets/styles/main.css"
   },
   "author": "transon",
   "license": "ISC",

@@ -1,8 +1,13 @@
 const express = require("express");
 const router = express.Router();
-
-router.get("/", (req, res) => {
-  return res.render('order/order');
+const User = require("../models/User");
+router.get("/", async (req, res) => {
+  try{
+    const Users = await User.find();
+    return res.render('order/order', {Users} );
+  } catch(err){
+    next(err)
+  }
 });
 
 module.exports = router;

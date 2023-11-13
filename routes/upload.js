@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const firebsae = require("firebase/app");
 const multer = require('multer');
+const sharp = require('sharp');
 const { getStorage, ref, getDownloadURL,uploadBytesResumable } = require("firebase/storage");
 const User = require("../models/User");
 
@@ -34,21 +35,21 @@ const storage = getStorage();
 const upload = multer({ storage: multer.memoryStorage() });
 
 router.post("/", upload.single("filename"), async (req, res) =>{
-  console.log(req.body);  
+  console.log(req.body); 
   console.log(req.file); 
     try {
-        const dateTime = giveCurrentDateTime();
-        const storageRef = ref(storage, `files/${req.file.originalname + " " + dateTime}`);
-        const metadata = {contentType: req.file.mimetype};
-        const snapshot = await uploadBytesResumable(storageRef, req.file.buffer, metadata);
-        const downloadURL = await getDownloadURL(snapshot.ref);
+        // const dateTime = giveCurrentDateTime();
+        // const storageRef = ref(storage, `files/${req.file.originalname + " " + dateTime}`);
+        // const metadata = {contentType: req.file.mimetype};
+        // const snapshot = await uploadBytesResumable(storageRef, req.file.buffer, metadata);
+        // const downloadURL = await getDownloadURL(snapshot.ref);
     
-        const newUser = User({
-            ...req.body,
-            img:downloadURL
-          })
-        await newUser.save();
-        return res.status(200).send('user have create')
+        // const newUser = User({
+        //     ...req.body,
+        //     img:downloadURL
+        //   })
+        // await newUser.save();
+        // return res.status(200).send('user have create')
     } catch (error) {
         console.log("error")
         return res.status(400).send(error.message)
